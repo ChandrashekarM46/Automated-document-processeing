@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 # Open the image file
 def connectToDb(filename,category):
-    uploaded_file = "C:/Users/91810/Desktop/Project/docs-sm/"+category+"/"+filename
+    uploaded_file = "C:/Users/91810/Desktop/Automated-document-processeing/images/"+category+"/"+filename
     image = Image.open(uploaded_file)
 
     # Connect to MongoDB
