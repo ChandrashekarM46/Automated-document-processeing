@@ -6,10 +6,7 @@ import os
 from util import getCategory
 from db import connectToDb
 
-# from dotenv import load_dotenv
-# load_dotenv()
-
-# openai.api_key = ''
+ openai.api_key = 'YOUR KEY'
 
 # Set page title
 st.set_page_config(page_title='OCR App')
@@ -51,59 +48,27 @@ Entities:"""
       st.title(category)
 
       connectToDb(uploaded_file.name,category)
-# import subprocess
-# import json
-
-# # Save OCR results to ocr_result.txt
-# with open('ocr_result.txt', 'w') as file:
-#     file.write(ocr_text)
-
-# # Execute testing.ipynb
-# try:
-#     subprocess.run(['jupyter', 'nbconvert', '--to', 'notebook', '--execute', 'testing.ipynb'])
-# except subprocess.CalledProcessError as e:
-#     # Handle the exception (e.g., print an error message or take alternative actions)
-#     st.warning("Error executing testing.ipynb:", e)
-
-
-# # Load the updated category from category.txt
-# try:
-#     with open('category.txt', 'r') as file:
-#         category = json.load(file)
-# except json.JSONDecodeError as e:
-#     st.error('Error loading JSON: ' + str(e))
-
-# # Check if category is not None
-# if category is not None:
-#     # Use the loaded category variable in your code
-#     st.warning(category)
-
-
-# import subprocess
-# subprocess.run(['jupyter', 'nbconvert', '--to', 'notebook', '--execute', 'testing.ipynb'])
-# #Now you can use the category variable in main.py
-# st.warning(category)
-
+      
 
 # After obtaining the ocr_text variable
 
-      #Get The Response
-#     response= openai.Completion.create(
-#     model="text-davinci-003",
-#     prompt=prompt,
-#     temperature=0,
-#     max_tokens=256,
-#     top_p=1,
-#     frequency_penalty=0,
-#     presence_penalty=0
-# )
-#     entities = response['choices'][0]['text']
+# entities extraction using openai key
+    response= openai.Completion.create(
+    model="text-davinci-003",
+    prompt=prompt,
+    temperature=0,
+    max_tokens=256,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0
+)
+    entities = response['choices'][0]['text']
     
 
-#     st.subheader("Entities")
-#     with st.expander("See Extracted Entities"):
-#       st.code(entities)
+    st.subheader("Entities")
+    with st.expander("See Extracted Entities"):
+      st.code(entities)
 
 
-  # else:
-  #   st.warning('Please upload an image first.')
+  else:
+    st.warning('Please upload an image first.')
