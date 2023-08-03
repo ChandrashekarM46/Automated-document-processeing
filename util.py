@@ -2,7 +2,7 @@ import pytesseract
 from tqdm.auto import tqdm
 import os
 import numpy as np
-# import streamlit as st
+
 
 import pinecone
 from sentence_transformers import SentenceTransformer
@@ -17,7 +17,6 @@ def getCategory(ocr_text):
     xq = model.encode([query]).tolist()
     result = index.query(xq,top_k=1,include_metadata=True)
     category=result["matches"][0]["metadata"]["category"]
-    # st.write(result)
     return category
 
 
