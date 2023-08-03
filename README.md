@@ -71,4 +71,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - This project was inspired by the need for efficient document processing and organization in various domains.
 
 ---
-By [Your Name](https://github.com/ChandrashekarM46) | [Project Repository](https://github.com/ChandrashekarM46/document-processing-with-nlp) | [License](LICENSE)
+By [Chandra Shekar M](https://github.com/ChandrashekarM46) | [Automated document processing](https://github.com/ChandrashekarM46/document-processing-with-nlp) | [License](LICENSE)
