@@ -1,6 +1,6 @@
 # Automated document processing
 
-This project aims to automate document processing using NLP (Natural Language Processing) techniques. It utilizes Optical Character Recognition (OCR) to extract text from document images and applies NLP models to process and categorize the extracted text.
+This project aims to automate document processing using NLP (Natural Language Processing) techniques. It utilizes Optical Character Recognition (OCR) to extract text from document images and applies NLP models to process and categorize the extracted text.Additionally, it uses OpenAI for entity extraction from the text.
 
 ## Tools and Models Used
 
