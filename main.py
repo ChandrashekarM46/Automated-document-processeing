@@ -50,9 +50,9 @@ Entities:"""
       connectToDb(uploaded_file.name,category)
       
 
-# After obtaining the ocr_text variable
+# after obtaining the ocr text
 
-# entities extraction using openai key
+# entitiy extraction using OpenAi
     response= openai.Completion.create(
     model="text-davinci-003",
     prompt=prompt,
